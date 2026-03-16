@@ -1,10 +1,4 @@
 .vs/
-out/
-build/
 *.user
 *.sln
-*.vcxproj
-*.filters
-bin/*.exe
-bin/*.obj
 *.slnx
