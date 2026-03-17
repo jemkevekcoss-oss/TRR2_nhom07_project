@@ -1,36 +1,35 @@
 #include "constValue.h"
-#include "raylib.h"
+#include "Game.h"
+
+
 
 using namespace std;
 
 
-/*
-Game state
 
-
-*/
 
 int main() {
-    // Khởi tạo cửa sổ 1 lần duy nhất
+    
     InitWindow(screenWidth, screenHeight, "Graph Algorithm Visualizer");
     SetTargetFPS(60);
 
-    //Visualizer app; // Khởi tạo toàn bộ game/app ở đây
+    Game game;
+    
 
-
-    // Handle Input -> Update Program -> Render/Drawing 
-    while (!WindowShouldClose()) {
-        BeginDrawing();
+    while (!WindowShouldClose() && game.running) {
         
-        //app.Update(); // Xử lý input và logic thuật toán
-        //app.Draw();   // Chỉ lo việc vẽ
+        
+        // Handle Input -> Update Program -> Render/Drawing 
+        
+        game.handleEvents();
+        game.Update();
 
-
-
-        EndDrawing();
+        
+        game.Draw();
+        
     }
 
-    //app.Cleanup(); // Giải phóng bộ nhớ, âm thanh
+    //game.Cleanup(); // Giải phóng bộ nhớ, âm thanh
     CloseWindow();
     return 0;
 }

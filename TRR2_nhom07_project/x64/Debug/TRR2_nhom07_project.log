@@ -1,2 +1,64 @@
-﻿  main.cpp
-  TRR2_nhom07_project.vcxproj -> D:\TRR2_nhom07_project\x64\Debug\TRR2_nhom07_project.exe
+﻿  Game.cpp
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(8,2): error C7568: argument list missing after assumed function template 'vector'
+  (compiling source file 'Game.cpp')
+  
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(9,2): error C7568: argument list missing after assumed function template 'vector'
+  (compiling source file 'Game.cpp')
+  
+  Graph.cpp
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(8,2): error C7568: argument list missing after assumed function template 'vector'
+  (compiling source file 'Graph.cpp')
+  
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(9,2): error C7568: argument list missing after assumed function template 'vector'
+  (compiling source file 'Graph.cpp')
+  
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(10,8): error C2660: 'CheckCollisionPointCircle': function does not take 1 arguments
+      D:\TRR2_nhom07_project\lib\raylib-5.5_win64_msvc16\include\raylib.h(1310,12):
+      see declaration of 'CheckCollisionPointCircle'
+      D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(10,8):
+      while trying to match the argument list '(Vector2)'
+  
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(23,8): error C2660: 'CheckCollisionPointCircle': function does not take 1 arguments
+      D:\TRR2_nhom07_project\lib\raylib-5.5_win64_msvc16\include\raylib.h(1310,12):
+      see declaration of 'CheckCollisionPointCircle'
+      D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(23,8):
+      while trying to match the argument list '(Vector2)'
+  
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(62,19): error C3312: no callable 'begin' function found for type '<error>'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(62,19): error C3312: no callable 'end' function found for type '<error>'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(62,17): error C2143: syntax error: missing ';' before ':'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(62,24): error C2143: syntax error: missing ';' before ')'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(77,17): error C3312: no callable 'begin' function found for type '<error>'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(77,17): error C3312: no callable 'end' function found for type '<error>'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(77,13): error C2530: 'v': references must be initialized
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(77,13): error C3531: 'v': a symbol whose type contains 'auto' must have an initializer
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(77,15): error C2143: syntax error: missing ';' before ':'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(77,25): error C2143: syntax error: missing ';' before ')'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(85,17): error C3312: no callable 'begin' function found for type '<error>'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(85,17): error C3312: no callable 'end' function found for type '<error>'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(85,13): error C2530: 'e': references must be initialized
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(85,13): error C3531: 'e': a symbol whose type contains 'auto' must have an initializer
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(85,15): error C2143: syntax error: missing ';' before ':'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(85,22): error C2143: syntax error: missing ';' before ')'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(86,26): error C7732: expected an expression before ']'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(86,55): error C7732: expected an expression before ']'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(86,3): error C2660: 'DrawLineEx': function does not take 3 arguments
+      D:\TRR2_nhom07_project\lib\raylib-5.5_win64_msvc16\include\raylib.h(1251,12):
+      see declaration of 'DrawLineEx'
+      D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(86,3):
+      while trying to match the argument list '()'
+  
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(90,17): error C3312: no callable 'begin' function found for type '<error>'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(90,17): error C3312: no callable 'end' function found for type '<error>'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(90,13): error C2530: 'v': references must be initialized
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(90,13): error C3531: 'v': a symbol whose type contains 'auto' must have an initializer
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(90,15): error C2143: syntax error: missing ';' before ':'
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.cpp(90,25): error C2143: syntax error: missing ';' before ')'
+  main.cpp
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(8,2): error C7568: argument list missing after assumed function template 'vector'
+  (compiling source file 'main.cpp')
+  
+D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(9,2): error C7568: argument list missing after assumed function template 'vector'
+  (compiling source file 'main.cpp')
+  
+  Generating Code...
