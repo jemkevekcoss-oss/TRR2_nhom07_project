@@ -1,0 +1,145 @@
+#include <bits/stdc++.h>
+#include <windows.h>
+
+using namespace std;
+
+
+int n,m;
+int M[1005][1005];
+vector<int> adj[1005];
+bool vis[1005];
+int speedProcess;
+
+vector<int> dfsRes;
+
+void displayVisitedVetex() {
+    cout << "Danh sach cac canh da tham: ";
+    for(int i=1; i <= n;i++) {
+        if(vis[i]) cout << i << ' ';
+    }
+    cout << '\n';
+}
+
+void input() {
+    cout << "Nhap vao so dinh n: ";
+    cin >> n;
+    cout << "Xin moi nhap ma tran ke kich thuoc nxn\n";
+    for(int i=1; i <= n;i++) {
+        for(int j = 1; j <= n;j++) {
+            cin >> M[i][j];
+            if(M[i][j]) {
+                adj[i].push_back(j);
+            }
+        }
+    }
+    cout << "Nhap toc do duyet dinh (ms): ";
+    cin >> speedProcess;
+    memset(vis,false,sizeof(vis));
+}
+
+void DFSwithStack(int u) {
+    stack<int> st;
+    st.push(u); vis[u] = true;
+
+    cout << u << ' ';
+
+    while(!st.empty()) {
+        int x = st.top(); st.pop();
+
+
+        for(int y : adj[x]) {
+            if(!vis[y]) {
+                vis[y] = true;
+                st.push(x); st.push(y);
+                cout << y << ' ';
+
+                break;
+            }
+        }
+    }
+}
+
+vector<pair<int,int>> T;
+
+void dfsMakeTree(int u) {
+    cout << "Dinh dang tham: " << u << '\n';
+    vis[u] = true;
+    displayVisitedVetex();
+    for(int v : adj[u]) {
+        if(!vis[v]) {
+            Sleep(speedProcess);
+            cout << "ghi nhan canh " << "("<<u<<","<<v<<")\n";
+            T.push_back(pair<int,int>{u,v});
+            dfsMakeTree(v);
+        }
+    }
+}
+void dfsMakeTreeGraph(int root) {
+    // Make sure all vis[i] == false; i = 1,2,...n
+
+    T.clear();
+
+    dfsMakeTree(root);
+
+    if(T.size() < n-1) {
+        cout << "Do thi ko lien thong\n";
+    }
+    else {
+        cout << "Cay khung co cac canh sau:\n";
+        for(int i=0; i < T.size();i++) {
+            cout << "(" << T[i].first << ' ' << T[i].second << ") ";
+        } cout << '\n';
+    }
+}
+
+void bfsMakeTreeGraph(int u) {
+    queue<int> q; q.push(u); vis[u] = true;
+    cout << "Dinh dang tham: " << u << '\n';
+    while(!q.empty()) {
+        int x = q.front(); q.pop();
+        for(int y : adj[x]) {
+            if(!vis[y]) {
+                T.push_back(pair<int,int>{x,y});
+                Sleep(speedProcess);
+                cout << "Dinh dang tham: " << y << '\n';
+                cout << "ghi nhan canh " << "("<<x<<","<<y<<")\n";
+                vis[y] = true;
+                q.push(y);
+            }
+        }
+    }
+    if((int)T.size() == n-1) {
+        cout << "Cay khung co cac canh sau:\n";
+        for(auto z : T) {
+            cout << "(" << z.first << ' ' << z.second << ") ";
+        } cout << '\n';
+    }
+
+}
+
+int main() {
+
+    input();
+    bfsMakeTreeGraph(1);
+
+
+}
+
+
+/*
+13
+0 1 1 1 0 0 0 0 0 0 0 0 0
+1 0 1 1 0 0 0 0 0 0 0 0 0
+1 1 0 1 1 0 0 0 0 0 0 0 0
+1 1 1 0 0 0 0 0 0 0 0 0 0
+0 0 1 0 0 1 1 1 0 0 0 0 0
+0 0 0 0 1 0 1 0 1 0 0 0 0
+0 0 0 0 1 1 0 1 0 0 0 0 0
+0 0 0 0 1 0 1 0 1 0 0 0 0
+0 0 0 0 0 1 0 1 0 1 0 0 0
+0 0 0 0 0 0 0 0 1 0 1 1 1
+0 0 0 0 0 0 0 0 0 1 0 1 1
+0 0 0 0 0 0 0 0 0 1 1 0 1
+0 0 0 0 0 0 0 0 0 1 1 1 0
+1000 
+*/
