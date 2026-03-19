@@ -5,7 +5,7 @@ using namespace std;
 
 Vertex::Vertex() {
 	position = Vector2{ 100,100 }; //Vi tri khoi tao
-	color = DARKBLUE; 
+	color = GRAY; 
 	radius = 30;
 	
 	ID = 0;
@@ -37,7 +37,7 @@ void Vertex::setID(int& id) { ID = id; }
 
 
 void Vertex::HandleNodeDragged() {
-	//Thay doi mau khi chon 
+	
 
 
 }
@@ -48,6 +48,15 @@ void Vertex::toggleSelected() {
 
 void Vertex::Draw() {
 	if (isSelected) color = RED;
-	else color = DARKBLUE;
+	else color = GRAY;
 	DrawCircleV(position, radius, color);
+
+	const char* idText = TextFormat("%d", ID);
+
+	int fontSize = 20;
+	int textWidth = MeasureText(idText, fontSize);
+
+	DrawText(idText,(int)position.x-textWidth/2,(int)position.y-fontSize/2,fontSize,WHITE);
+
+
 }

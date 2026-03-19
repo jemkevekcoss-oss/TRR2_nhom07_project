@@ -88,12 +88,46 @@ void Graph::HandleConnectSelectedVertices() {
 		for (auto& v : vertices) v.isSelected = false;
 	}
 }
+void Graph::HandleDeleteSelectedVertices() {
+	if (IsKeyPressed(KEY_X)) {
+		vector<int> selectedIndices; //Temporary contaner
+		for (int i = 0; i < vertices.size(); i++) {
+			if (vertices[i].isSelected) {
+				selectedIndices.push_back(vertices[i].getID());
+				//Gia su dinh thu i co chi so la i
+			}
+		}
+		for (int i = 0; i < selectedIndices.size() - 1; i++) {
+			for (int j = i + 1; j < selectedIndices.size(); j++) {
+				int u = selectedIndices[i];
+				int v = selectedIndices[j];
 
+
+				// Tìm và xóa cạnh nối giữa u và v (nếu có)
+				for (auto it = Edges.begin(); it != Edges.end(); ) {
+					if ((it->u == u && it->v == v) || (it->v == u && it->u == v)) {
+						it = Edges.erase(it); // Xóa và lấy iterator kế tiếp
+						// Nếu đồ thị đơn (chỉ có 1 cạnh giữa u,v) thì có thể break ở đây
+						break;
+					}
+					else {
+						++it;
+					}
+				}
+
+			}
+		}
+		// Sau khi xóa xong thì bỏ chọn tất cả
+		for (auto& v : vertices) v.isSelected = false;
+	}
+}
 
 void Graph::HandleInputEvents() {
 	HandleDraggingVertex();
 	HandleSelectingVertex();
 	HandleConnectSelectedVertices();
+	HandleDeleteSelectedVertices();
+
 
 }
 
@@ -135,7 +169,7 @@ void Graph::Draw() {
 				Vector2 startPos = vertices[idxU].getPosition();
 				Vector2 endPos = vertices[idxV].getPosition();
 
-				DrawLineEx(startPos, endPos, 5.0f, GRAY);
+				DrawLineEx(startPos, endPos, 5.0f, BLACK);
 
 				// (Tùy chọn) Nếu có trọng số, bạn có thể vẽ thêm text ở trung điểm cạnh ở đây
 			}

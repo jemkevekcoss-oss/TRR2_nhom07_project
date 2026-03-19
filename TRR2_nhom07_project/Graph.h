@@ -20,7 +20,7 @@ public:
 	void HandleDraggingVertex();
 	void HandleSelectingVertex();
 	void HandleConnectSelectedVertices();
-
+	void HandleDeleteSelectedVertices();
 
 	void HandleInputEvents();
 	void Update();

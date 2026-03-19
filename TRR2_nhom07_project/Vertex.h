@@ -1,5 +1,6 @@
 #pragma once
 #include "constValue.h"
+#include <string>
 
 using namespace std;
 
