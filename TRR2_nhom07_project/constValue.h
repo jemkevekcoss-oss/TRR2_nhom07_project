@@ -15,5 +15,6 @@ inline  const int screenWidth = 1900;
 inline const int screenHeight = 1000;
 inline const float nodeRadius = 30;
 
-
+#define NONE_KEY -1
+#define NOT_DRAGGING -1
 

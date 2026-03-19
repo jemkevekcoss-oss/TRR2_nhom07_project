@@ -1,23 +1,6 @@
 ﻿  Game.cpp
   Graph.cpp
-D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(9,2): error C7568: argument list missing after assumed function template 'vector'
-  (compiling source file 'Game.cpp')
-  
-D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(10,2): error C7568: argument list missing after assumed function template 'vector'
-  (compiling source file 'Game.cpp')
-  
-D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(9,2): error C7568: argument list missing after assumed function template 'vector'
-  (compiling source file 'Graph.cpp')
-  
-D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(10,2): error C7568: argument list missing after assumed function template 'vector'
-  (compiling source file 'Graph.cpp')
-  
   Vertex.cpp
   main.cpp
-D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(9,2): error C7568: argument list missing after assumed function template 'vector'
-  (compiling source file 'main.cpp')
-  
-D:\TRR2_nhom07_project\TRR2_nhom07_project\Graph.h(10,2): error C7568: argument list missing after assumed function template 'vector'
-  (compiling source file 'main.cpp')
-  
   Generating Code...
+  TRR2_nhom07_project.vcxproj -> D:\TRR2_nhom07_project\x64\Debug\TRR2_nhom07_project.exe

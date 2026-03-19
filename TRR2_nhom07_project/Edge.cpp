@@ -3,6 +3,9 @@
 using namespace std;
 
 
+Edge::Edge() {
+	isSelected = false;
 
+}
 
 

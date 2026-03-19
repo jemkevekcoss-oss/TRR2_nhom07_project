@@ -4,7 +4,7 @@ using namespace std;
 
 
 Game::Game() {
-	currentState = MENU;
+	currentState = EDITING;  //Trang thai khoi tao
 	running = true;
 
 
@@ -19,7 +19,7 @@ void Game::HandleInputEvents() {
 			break;
 		}
 		case GameState::EDITING: {
-			//handleEditingInput(); 
+			graph.HandleInputEvents();
 
 			break;
 		}
@@ -44,7 +44,7 @@ void Game::Update() {
 			break;
 		}
 		case GameState::EDITING: {
-			//updateEditing();
+			graph.Update();
 
 			break;
 		}
@@ -64,6 +64,8 @@ void Game::Update() {
 void Game::Draw() {
 	BeginDrawing();
 	ClearBackground(WHITE);
+
+	graph.Draw(); 
 
 	DrawText("SIMULATOR",10,10,40,DARKBLUE);
 
